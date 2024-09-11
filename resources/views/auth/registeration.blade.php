@@ -1,13 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.app')
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{{ url('public/css/style.css') }}">
-    <title>Registration Form</title>
-</head>
-<body>
+@section('content')
     <div class="main">
         <div>
           <span style="color: red;">{{ $errors->first('username') }}</span>
@@ -38,9 +31,8 @@
           </select>
             <div class="row button"><input type="submit" value="Registeration"></div>
               <div class="sign-in">Sign In?<a href="{{ url('login')}}">Login</a></div>
-              <div class="singup-link">Welcome Page?<a href="{{ url('/') }}">Welcome Page</a></div>
+              <div class="singup-link">Welcome Page? <a href="{{ url('/') }}">Welcome Page</a></div>
         </form>
     </div>
-</body>
 
-</html>
+    @endsection
